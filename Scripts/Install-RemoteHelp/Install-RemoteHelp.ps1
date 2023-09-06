@@ -68,7 +68,7 @@ function Get-RemoteHelp {
 
     # Use Invoke-WebRequest to get the response. The `-MaximumRedirection 0` ensures there's no automatic redirection.
     Try {
-        $Response = Invoke-WebRequest -Uri $RemHelpURL -MaximumRedirection 0 -ErrorAction SilentlyContinue
+        $Response = Invoke-WebRequest -Uri $RemHelpURL -MaximumRedirection 0 -UseBasicParsing -ErrorAction SilentlyContinue
     }
     Catch {
         # If a redirection occurs, catch the response regardless
