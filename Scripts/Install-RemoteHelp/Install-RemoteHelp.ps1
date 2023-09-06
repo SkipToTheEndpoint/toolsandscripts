@@ -12,7 +12,7 @@
         Detection Rule:     File - C:\Program Files\Remote Help\RemoteHelp.exe
 #>
 
-# Import required assemblies
+# Import required assemblies - Required due to WebClient deprecation: https://learn.microsoft.com/en-us/dotnet/core/compatibility/networking/6.0/webrequest-deprecated
 Add-Type -AssemblyName System.Net.Http
 
 function Start-Logging {
