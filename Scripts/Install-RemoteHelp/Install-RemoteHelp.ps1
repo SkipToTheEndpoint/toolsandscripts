@@ -79,15 +79,15 @@ function Get-RemoteHelp {
     $LocationUrl = $Response.Headers.Location
     # Get the filename from the location header
     Write-Host "File name: $($FileName)"
-    $FileName = Split-Path -Path $Response.Headers.Location -Leaf
+    $Script:FileName = Split-Path -Path $Response.Headers.Location -Leaf
 
     Get-File -URL $LocationUrl -Path "$env:TEMP" -Name $FileName
 }
 
 function Install-RemoteHelp {
-    Write-Host "Installing: $($Installer)"
+    Write-Host "Installing: $($FileName)"
     Try {
-        $Proc = Start-Process $env:TEMP\$FileName -ArgumentList "/quiet acceptTerms=1 enableAutoUpdates=1" -Wait -PassThru -ErrorAction Stop
+        $Script:Proc = Start-Process $env:TEMP\$FileName -ArgumentList "/quiet acceptTerms=1 enableAutoUpdates=1" -Wait -PassThru -ErrorAction Stop
     }
     Catch {
         Write-Error "$($_.Exception.Message)"
