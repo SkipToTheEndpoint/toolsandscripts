@@ -1000,7 +1000,7 @@
               "timeContextFromParameter": "TimeRange",
               "queryType": 0,
               "resourceType": "microsoft.operationalinsights/workspaces",
-              "visualization": "areachart",
+              "visualization": "timechart",
               "chartSettings": {
                 "seriesLabelSettings": [
                   {
@@ -1012,6 +1012,11 @@
                     "seriesName": "sum_BytesFromCDN",
                     "label": "Bytes from CDN",
                     "color": "orange"
+                  },
+                  {
+                    "seriesName": "sum_BytesFromCache",
+                    "label": "Bytes from Cache",
+                    "color": "blue"
                   },
                   {
                     "seriesName": "sum_BytesFromIntPeers",
@@ -1103,6 +1108,13 @@
                     "formatter": 4,
                     "formatOptions": {
                       "palette": "green"
+                    }
+                  },
+                  {
+                    "columnMatch": "BytesFromCache",
+                    "formatter": 4,
+                    "formatOptions": {
+                      "palette": "blue"
                     }
                   },
                   {
