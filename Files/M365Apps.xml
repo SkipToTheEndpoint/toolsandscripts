@@ -1,6 +1,6 @@
 <Configuration>
   <RemoveMSI />
-  <Remove All="TRUE">
+    <Remove All="TRUE">
   </Remove>
   <Add OfficeClientEdition="64" Channel="MonthlyEnterprise">
     <Product ID="O365ProPlusRetail">
