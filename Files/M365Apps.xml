@@ -3,7 +3,7 @@
   <Remove All="TRUE">
   </Remove>
   <Add OfficeClientEdition="64" Channel="MonthlyEnterprise">
-    <Product ID="O365ProPlusRetail">
+    <Product ID="O365BusinessRetail">
       <Language ID="en-gb" />
       <ExcludeApp ID="Access" />
       <ExcludeApp ID="Publisher" />
