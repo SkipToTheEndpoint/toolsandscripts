@@ -4,7 +4,7 @@
   </Remove>
   <Add OfficeClientEdition="64" Channel="MonthlyEnterprise">
     <Product ID="O365BusinessRetail">
-      <Language ID="en-gb" />
+      <Language ID="MatchOS" Fallback="en-us" />
       <ExcludeApp ID="Access" />
       <ExcludeApp ID="Publisher" />
       <ExcludeApp ID="Groove" />
